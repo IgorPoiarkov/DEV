@@ -39,9 +39,9 @@ if ($distance <= 5  && $age < 70 && $pickup) {
 	echo $total = $cost + $cost * $delivery1;
 } else if ($distance <= 5  && $age >= 70 && $pickup) {
 	echo $total = $cost + $cost * $delivery1 * 0.5;
-} else if (($distance > 5 && $distance < 20)  && $age < 70 && $pickup) {
+} else if ($distance < 20  && $age < 70 && $pickup) {
 	echo $total = $cost + $cost * $delivery2;
-} else if (($distance > 5 && $distance < 20)  && $age >= 70 && $pickup) {
+} else if ($distance < 20 && $age >= 70 && $pickup) {
 	echo $total = $cost + $cost * $delivery2 * 0.5;
 } else if ($distance >= 20 && $age < 70 && $pickup) {
 	//множитель для расчета доставки 20+км

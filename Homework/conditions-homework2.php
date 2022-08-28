@@ -34,7 +34,7 @@ $delivery2 = 0.15;
 $total;
 if ($distance <= 5 && $pickup == false) {
 	echo $total = $cost + $cost * $delivery1;
-} else if (($distance > 5 && $distance < 20) && $pickup == false) {
+} else if ($distance < 20 && $pickup == false) {
 	echo $total = $cost + $cost * $delivery2;
 } else if ($distance >= 20 && $pickup == false) {
 	//множитель для расчета доставки 20+км

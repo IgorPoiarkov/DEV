@@ -14,7 +14,7 @@
 //стоимость заказа, эту переменную мы можем менять для проверки нашего скрипта
 $cost = 1000;
 //дистанция до клиента, эту переменную мы можем менять для проверки нашего скрипта
-$distance = 10;
+$distance = 20;
 
 //множитель для расчета доставки 0-5км
 $delivery1 = 0.1;
@@ -22,26 +22,9 @@ $delivery1 = 0.1;
 $delivery2 = 0.15;
 $total;
 
-//Решение 1:
-/*
-if($distance <= 5 ){
-	echo $total = $cost + $cost * $delivery1;
-} else if ($distance > 5) {
-	if ($distance < 20) {
-		echo $total = $cost + $cost * $delivery2;
-	} else if ($distance >= 20){
-	//множитель для расчета доставки 20+км
-	$delivery1 = 0.2;
-	echo $total = $cost + $cost * $delivery1;
-	}
-}
-*/
-
-//Решение 2:
-
 if ($distance <= 5) {
 	echo $total = $cost + $cost * $delivery1;
-} else if ($distance > 5 && $distance < 20) {
+} else if ($distance < 20) {
 	echo $total = $cost + $cost * $delivery2;
 } else if ($distance >= 20) {
 	//множитель для расчета доставки 20+км
