@@ -17,10 +17,27 @@ $hours = [7, 9, 4, 6, 8, 0, 0, 3, 9, 9, 6, 8, 2, 0, 9, 5, 8, 4, 8, 0, 4, 9, 6, 4
 
 const BR = '<br />';
 
+
+
+
 $sum = 0;
 for ($i = 0; $i < count($hours); $i++) {
-	$sum = $sum + $hours[$i];
+	if($hours[i]<6){
+		echo count($hours);
+	}
 }
-echo $sum.BR;
+
+
+
+
+
+/*
+foreach($hours as $key => $item){
+	if($item < 6){
+		echo $item.BR;
+	}
+} 
+echo count($hours);
+*/
 
 
