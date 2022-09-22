@@ -11,34 +11,48 @@
 class Appartment
 {
 	public $floors = 1;
-	public $location;
 	public $rooms = 3;
-	public $hamam = false;
-	public $parking = false;
-	public $pool = true;
+	public $ac = false;
+	public $rentprice = 1000;
 	public $bathrooms = 2;
 
-	public function __construct($rank, $meal)
+	public function putAc()
 	{
-		$this->stars = $rank;
-		if ($meal == 'All inclusive') {
-			$this->priceCoefficient = 1.5;
-		}
+		$this->ac = true;
+		$this->rentprice += 100;
 	}
 
-	public function addParking()
+
+	public function addRoom()
 	{
-		$this->parking = true;
-		$this->stars++;
+		$this->rooms++;
+		$this->rentprice += 100;
+	}
+
+	public function remRoom()
+	{
+		$this->rooms--;
+		$this->rentprice -= 100;
+	}
+
+	public function addBathroom()
+	{
+		$this->bathrooms++;
+		$this->rentprice += 50;
+	}
+
+	public function remBathroom()
+	{
+		$this->bathrooms--;
+		$this->rentprice -= 50;
 	}
 }
 
-$hotel = new Appartment(4, 'All inclusive');
-$hotel->addParking();
-$hotel->rooms = 70;
+$appart = new Appartment();
+$appart->putAc();
+$appart->addRoom();
+$appart->remRoom();
+$appart->addBathroom();
 
-var_dump($hotel);
 
-
-
-?>
+var_dump($appart);
