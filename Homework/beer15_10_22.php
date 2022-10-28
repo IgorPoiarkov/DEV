@@ -107,3 +107,31 @@ $shops = [
 // 1) Необходимо вывести на экран самое дешевое пиво каждого типа (Например lager 100 - Ankara, Rejep)
 // 2) Необходимо найти и вывести % продаж от общего чека каждого типа пива для каждого города
 
+foreach ($shops as $city => $cityShops) {
+	
+		foreach ($cityShops as $name => $market) {
+			//var_dump($market); die;
+			$totalSalesForMarket = 0;
+			$typeSales = [];
+			$assortiment = $market->assortiment;
+			//var_dump($market -> assortiment); die;
+			
+			foreach ($assortiment as $bira) {
+				//var_dump($bira); die;
+				$soldAmountForBira = $bira->price * $bira->soldCount;
+				$totalSalesForMarket += $soldAmountForBira;
+				$type = $bira->type;
+				if (!isset($typeSales[$type])) {
+					$typeSales[$type] = 0; // добавили элемент в массив
+				}
+				$typeSales[$type] += $soldAmountForBira;
+			}
+			echo $city . ': ';
+			foreach ($typeSales as $type => $salesForType) {
+				echo $type . ' ' . round($salesForType / $totalSalesForMarket * 100) . '%' . '<br>';
+			}
+			//var_dump($totalSalesForMarket);
+			//var_dump($typeSales);
+		
+	}
+}
