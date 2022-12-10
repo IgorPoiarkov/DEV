@@ -40,25 +40,25 @@ $sales = '2022-09-01, 2022-01-01, 2010-01-09, 2007-09-01, 2012-09-03';
 
 
 
-$a = explode(', ', $sales);
-var_dump($a);
+// $a = explode(', ', $sales);
+// //var_dump($a);
 
-foreach ($a as $key => $rest) {
-	$rest = substr($rest, 0, -6);
+// foreach ($a as $key => $rest) {
+// 	$rest = substr($rest, 0, -6);
 
-	var_dump($rest);
-}
+// 	var_dump($rest);
+// }
 
-/*
+
 $counterArray = [];
 if (isset($counterArray[2])) {
 	$counterArray[2] = 0;
 } else {
 	$counterArray[2] = 1;
 }
-*/
 
-var_dump($a);
+
+//var_dump($a);
 
 $counterArray = [];
 foreach ($a as $key => $date) {

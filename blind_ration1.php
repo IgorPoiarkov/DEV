@@ -18,7 +18,44 @@ $ration = require_once('arrays3/ration.php');
  * Перебирать в первую очередь нужно $ration
  */
 
+// foreach ($ration as $date => $mealForDate) {
+// 	var_dump($mealForDate[0]); die;
+// }
+
+
+
+//var_dump($foodTypes[0]['id']);
+
+
+
+
+
+
+
+
+$array = [];
+
+
 foreach ($ration as $date => $mealForDate) {
-	var_dump($mealForDate[0]); die;
+	foreach ($mealForDate as $mealId) {
+		if (isset($array[$mealId])) {
+
+			$array[$mealId] += 1;
+		} else {
+			$array[$mealId] = 1;
+		}
+	}
 }
 
+var_dump($array);
+
+$maxs = array_keys($array, max($array));
+
+var_dump($maxs);
+foreach ($maxs as $maxsKey => $maxsValue) {
+	foreach ($foodTypes as $meal => $mealSpecs) {
+		if ($maxsValue == $mealSpecs['id']) {
+			echo $mealSpecs['name'] . '<br>';
+		}
+	}
+}
