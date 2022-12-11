@@ -7,7 +7,3 @@
 
 $num1 =2;
 $num2 = 3;
-
-for ($i = 0; $i <= $num2; $i++) {
-	echo $num1*=$num1 . '<br>';
-}
