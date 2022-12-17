@@ -34,6 +34,24 @@ date('Y-m-j-H-i-s');
 $date = date('Y-m-j-H-i-s');
 echo $date;
 
-echo __DIR__;
-$newFile = fopen($date . '.txt', 'x+');
+//echo __DIR__;
+
 //echo $newFile;
+
+
+echo '<hr>';
+
+//$randomNumber = random_int(PHP_INT_MIN, PHP_INT_MAX); // Произвольное значение целое число
+
+
+//$newFile = fopen($date . '.txt', 'x+'); // Создаем файл, именем которoго является текущее дата и время
+//file_put_contents($date . '.txt', $randomNumber); // Наполянем созданный файл произвольным числом
+//file_put_contents($date . '.txt', random_int(PHP_INT_MIN, PHP_INT_MAX)); - //Альтернативная запись
+
+
+echo '<hr>';
+
+
+$num1 =2;
+$num2 = 7;
+$num3 = 9;
