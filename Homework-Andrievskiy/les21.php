@@ -149,8 +149,8 @@ var_dump($new_array);
 //4)
 echo '<hr>';
 
-for($i = 0; $i <= rand(5,10) ;$i++){
-	$arr[] = rand(0,100);
+for ($i = 0; $i <= rand(5, 10); $i++) {
+	$arr[] = rand(0, 100);
 }
 asort($arr);
 var_dump($arr);
